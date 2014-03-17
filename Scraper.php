@@ -34,6 +34,17 @@ class Web_Scraper {
 		
 		$this->cookie_file = dirname(__file__) . $NewOptions['cookie_path'].$NewOptions['cookie_name'];
 	}
+	
+	
+	/**
+	 * Delete cookie file.
+	 *
+	 * By: jstormes Mar 17, 2014
+	 *
+	 */
+	public function delete_cookie() {
+		unlink($this->cookie_file);
+	}
 
 
 	/**
