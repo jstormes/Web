@@ -43,7 +43,7 @@ class Web_Scraper {
 	 *
 	 */
 	public function delete_cookie() {
-		unlink($this->cookie_file);
+		@unlink($this->cookie_file);
 	}
 
 
