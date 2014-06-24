@@ -172,6 +172,9 @@ class Web_Scraper {
 			        /*** get each column by tag name ***/
 			        $cols = $row->getElementsByTagName('td');
 			        
+			        if ($cols->length==0)
+			        	$cols = $row->getElementsByTagName('th');
+			        
 			        $r = array();
 			        for($i=0; $i<$cols->length; $i++ ){
 			        	$r[$i]=trim($cols->item($i)->nodeValue);
